@@ -1,12 +1,9 @@
 ```mermaid
 classDiagram
-
-class BankAccount
-BankAccount : +String CustomerName
-BankAccount : +Double Balance
-BankAccount : +Debit() Void
-BankAccount : +Credit() Void
-
-
-
-```
+    class BankAccount {
+        - string m_customerName
+        - double m_balance
+        + BankAccount(string customerName, double balance)
+        + void Debit(double amount)
+        + void Credit(double amount)
+    }
